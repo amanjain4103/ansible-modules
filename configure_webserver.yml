@@ -1,0 +1,19 @@
+- vars: 
+    - ip1: localhost
+    - ip2: localhost
+  hosts:
+    - "{{ip1}}"
+    - "{{ip2}}"
+  tasks: 
+    - name: "installing httpd"
+      yum:
+        name: httpd
+        state: present
+    - name: "copy files" 
+      copy:
+        src: /root/ansible1/website_data/index.html
+        dest: /var/www/html/
+    - name: "start the service"
+      service:
+        name: httpd
+        state: restarted

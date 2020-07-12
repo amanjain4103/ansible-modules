@@ -1,0 +1,19 @@
+- name: "provisioning aws ec2 instance"
+  hosts: localhost
+  vars:
+    - number_of_instance: 1
+    - image_id_for_us_east_1: ami-098bb5d92c8886ca1
+  tasks:
+    - ec2:
+        key_name: stark
+        instance_type: t2.micro
+        image: "{{image_id_for_us_east_1}}"
+        region: us-east-1
+        count: "{{number_of_instance}}"
+        wait: yes
+        vpc_subnet_id: subnet-569f4d09
+        assign_public_ip: yes
+        aws_access_key: AKIA2QL6SGUJVNIGWLOZ
+        aws_secret_key: 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
+
+

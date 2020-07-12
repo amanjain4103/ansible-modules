@@ -1,0 +1,11 @@
+- vars: 
+    - ip: localhost
+  hosts:
+    - "{{ip}}"
+  tasks:
+    - yum:
+        name: haproxy.x86_64
+        state: started
+    - service:
+        name: haproxy
+        state: restarted
