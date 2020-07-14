@@ -13,7 +13,7 @@
         wait: yes
         vpc_subnet_id: subnet-569f4d09
         assign_public_ip: yes
-        aws_access_key: AKIA2QL6SGUJVNIGWLOZ
-        aws_secret_key: +/MfhYB95fHnFY6wRUSuyy78RamKNx+TCZvqUEpo
+        aws_access_key: (your user access key)
+        aws_secret_key: (your user secret key)
 
 
